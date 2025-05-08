@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background-color: #f0f4f8; /* Un azul claro muy suave */
+    background-color: #f0f4f8; 
     color: #333;
     display: flex;
     justify-content: center;
@@ -21,20 +21,33 @@ body {
 }
 
 h1 {
-    color: #2c3e50; /* Azul oscuro */
+    color: #2c3e50; 
     text-align: center;
     margin-bottom: 10px;
 }
 
-.score-board {
-    text-align: right;
-    font-size: 1.2em;
-    color: #3498db; /* Azul */
+.session-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #3498db;
 }
 
+#contadorEjemplos {
+    font-weight: bold;
+}
+
+.score-board {
+    text-align: right;
+    font-size: 1.2em; /* Mantenido del anterior */
+    color: #3498db; 
+}
+
+
 .formula-display {
-    background-color: #eaf2f8; /* Azul muy pálido */
+    background-color: #eaf2f8; 
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -51,8 +64,8 @@ h1 {
 .formula-display h2 {
     margin: 0;
     font-size: 2.2em;
-    color: #1a5276; /* Azul más intenso */
-    font-family: 'Courier New', Courier, monospace; /* Para mejor visualización de fórmulas */
+    color: #1a5276; 
+    font-family: 'Courier New', Courier, monospace; 
 }
 
 .pregunta-bloque {
@@ -67,11 +80,11 @@ h1 {
     font-weight: bold;
     font-size: 1.15em;
     margin-bottom: 15px;
-    color: #34495e; /* Azul grisáceo */
+    color: #34495e; 
 }
 
-.pregunta-bloque button, #siguienteEjemploBtn {
-    background-color: #3498db; /* Azul */
+.pregunta-bloque button, #siguienteEjemploBtn, #reiniciarSesionBtn {
+    background-color: #3498db; 
     color: white;
     border: none;
     padding: 10px 18px;
@@ -82,12 +95,12 @@ h1 {
     transition: background-color 0.2s ease;
 }
 
-.pregunta-bloque button:hover, #siguienteEjemploBtn:hover {
-    background-color: #2980b9; /* Azul más oscuro */
+.pregunta-bloque button:hover, #siguienteEjemploBtn:hover, #reiniciarSesionBtn:hover {
+    background-color: #2980b9; 
 }
 
 .pregunta-bloque button:disabled {
-    background-color: #bdc3c7; /* Gris claro */
+    background-color: #bdc3c7; 
     cursor: not-allowed;
 }
 
@@ -107,14 +120,13 @@ h1 {
 }
 
 .feedback-icon.ok {
-    color: #2ecc71; /* Verde */
+    color: #2ecc71; 
 }
 
 .feedback-icon.ko {
-    color: #e74c3c; /* Rojo */
+    color: #e74c3c; 
 }
 
-/* Estilos para las preguntas de tipo 3c (compuestas) */
 #atomosPorMoleculaCompuestaContainer div,
 #atomosTotalesCompuestosContainer div {
     margin-bottom: 12px;
@@ -125,25 +137,34 @@ h1 {
 #atomosPorMoleculaCompuestaContainer label,
 #atomosTotalesCompuestosContainer label {
     display: inline-block;
-    min-width: 280px; /* Ajustar según necesidad */
+    min-width: 280px; 
     margin-right: 5px;
 }
 
 
-#siguienteEjemploBtn {
+#siguienteEjemploBtn, #reiniciarSesionBtn {
     display: block;
     width: 100%;
     padding: 15px;
     font-size: 1.2em;
-    background-color: #27ae60; /* Verde */
+    margin-top: 10px; /* Espacio entre botones si ambos están visibles */
+}
+#siguienteEjemploBtn {
+    background-color: #27ae60; 
+}
+#siguienteEjemploBtn:hover {
+    background-color: #229954; 
+}
+#reiniciarSesionBtn {
+    background-color: #e67e22; /* Naranja para reiniciar */
+}
+#reiniciarSesionBtn:hover {
+    background-color: #d35400; /* Naranja más oscuro */
 }
 
-#siguienteEjemploBtn:hover {
-    background-color: #229954; /* Verde más oscuro */
-}
 
 #mensajeFinal {
     text-align: center;
     font-size: 1.3em;
-    color: #16a085; /* Verde azulado */
+    color: #16a085; 
 }
